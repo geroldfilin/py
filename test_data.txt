@@ -1,0 +1,103 @@
+fastethernet 1/0/1 is up (connected)
+  Interface index is 1
+  Hardware is fastethernet, MAC address is e4:5a:d4:a7:74:41
+  Description: Customer-1
+  Interface MTU is 1500
+  Full-duplex, 100Mbps, link type is auto, media type is 100M-Copper
+  Link is up for 0 days, 7 hours, 17 minutes and 30 seconds
+  Advertised link modes: 100baseT/Full 100baseT/Half
+                         10baseT/Full 10baseT/Half
+
+  Flow control is off, MDIX mode is off
+  15 second input rate is 0 Kbit/s
+  15 second output rate is 1 Kbit/s
+      105841794 packets input, 56290436035 bytes received
+      99 broadcasts, 0 multicasts
+      0 input errors, 0 FCS, 0 alignment
+      0 oversize, 0 internal MAC
+      0 pause frames received
+      173374931 packets output, 178158194519 bytes sent
+      58 broadcasts, 55 multicasts
+      0 output errors, 0 collisions
+      0 excessive collisions, 0 late collisions
+      0 pause frames transmitted
+      0 symbol errors, 0 carrier, 0 SQE test error
+
+ELT-DKT-SW-10-182#sh mac address-table int fa0/1
+
+  Vlan        Mac Address         Port       Type
+-------- --------------------- ---------- ----------
+  406      a8:5e:45:47:e4:40    fa1/0/1    dynamic
+
+ELT-DKT-SW-10-182#sh vlan
+
+Vlan            Name                    Tagged ports               Untagged ports            Type     Authorization
+---- --------------------------- --------------------------- --------------------------- ------------ -------------
+ 1                -                           -                   gi1/0/1-4,Po1-16         Default      Required
+202           MANAGMENT                   gi1/0/1-4                       -               permanent     Required
+406           Customers                    gi1/0/4                   fa1/0/1-24           permanent     Required
+890             IPTV                      gi1/0/1-4                  fa1/0/1-24           permanent     Required
+
+ELT-DKT-SW-10-182#sh logging
+Logging is enabled.
+Console Logging: Level notActive. Console Messages: 418 Dropped.
+Buffer Logging: Level info. Buffer Messages: 200 Logged, 200 Displayed, 200 Max.
+File Logging: Level error. File Messages: 40 Logged, 424 Dropped.
+SysLog server 91.229.128.30 Port: 514. Logging: error. Messages: 312 Dropped.
+5 messages were not logged
+
+Application filtering control
+Application                 Event                       Status
+--------------------        --------------------        ---------
+AAA                         Login                       Enabled
+File system                 Copy                        Enabled
+File system                 Delete-Rename               Enabled
+Management ACL              Deny                        Enabled
+
+
+Aggregation: Disabled.
+Aggregation aging time: 300 Sec
+
+26-Apr-2023 10:20:53 :%AAA-I-CONNECT: User CLI session for user admin over telnet , source 192.168.192.120 destination  10.253.10.182, local user table ACCEPTED.
+
+26-Apr-2023 10:20:11 :%AAA-I-DISCONNECT: User CLI session for user admin over telnet , source 192.168.192.120 destination  10.253.10.182  TERMINATED.
+
+26-Apr-2023 10:18:11 :%AAA-I-CONNECT: User CLI session for user admin over telnet , source 192.168.192.120 destination  10.253.10.182, local user table ACCEPTED.
+
+26-Apr-2023 09:43:49 :%LINK-I-Up:  fa1/0/8, 100Mbps FULL duplex
+
+26-Apr-2023 09:43:48 :%LINK-W-Down:  fa1/0/8
+
+26-Apr-2023 09:43:45 :%LINK-I-Up:  fa1/0/8, 100Mbps FULL duplex
+
+26-Apr-2023 09:43:42 :%LINK-W-Down:  fa1/0/8
+
+26-Apr-2023 09:43:42 :%LINK-I-Up:  fa1/0/8, 100Mbps FULL duplex
+
+26-Apr-2023 09:43:40 :%LINK-W-Down:  fa1/0/8
+
+26-Apr-2023 09:43:39 :%LINK-I-Up:  fa1/0/8, 100Mbps FULL duplex
+
+26-Apr-2023 03:00:44 :%LINK-I-Up:  fa1/0/1, 100Mbps FULL duplex
+
+26-Apr-2023 03:00:42 :%LINK-W-Down:  fa1/0/1
+
+26-Apr-2023 03:00:38 :%LINK-I-Up:  fa1/0/1, 100Mbps FULL duplex
+
+26-Apr-2023 03:00:22 :%LINK-W-Down:  fa1/0/1
+
+25-Apr-2023 23:54:40 :%LINK-W-Down:  fa1/0/8
+
+25-Apr-2023 17:28:39 :%LINK-W-Down:  fa1/0/7
+
+25-Apr-2023 09:43:35 :%LINK-I-Up:  fa1/0/8, 100Mbps FULL duplex
+
+25-Apr-2023 09:43:33 :%LINK-W-Down:  fa1/0/8
+
+25-Apr-2023 09:43:31 :%LINK-I-Up:  fa1/0/8, 100Mbps FULL duplex
+
+25-Apr-2023 09:43:28 :%LINK-W-Down:  fa1/0/8
+
+25-Apr-2023 09:43:27 :%LINK-I-Up:  fa1/0/8, 100Mbps FULL duplex
+
+25-Apr-2023 09:43:26 :%LINK-W-Down:  fa1/0/8
